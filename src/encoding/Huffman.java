@@ -64,9 +64,6 @@ public class Huffman
 
 		while (PQ.size() > 1)
 		{ // while there are two or more Trees left in the forest
-
-			// FILL THIS IN:
-
 			// IMPLEMENT THE HUFFMAN ALGORITHM
 			Node rootNode = new Node();
 			rootNode.letter = '@';
@@ -84,22 +81,10 @@ public class Huffman
 			combinedTree.root.rightChild = right.root;
 			
 			PQ.add(combinedTree);
-			
-		//!!!	combinedTree.frequency 
-
-			// when you're making the new combined tree, don't forget to assign
-			// a default root node (or else you'll get a null pointer exception)
-			// if you like, to check if everything is working so far, try
-			// printing out the letter of the roots of the two trees you're
-			// combining
 		}
 
 		Tree HuffmanTree = PQ.poll(); // now there's only one tree left - get its codes
-										
-
-		// FILL THIS IN:
-		
-		
+	
 		for (int i = 0; i < array.length; i++)
 		{ // go through frequency array
 			if (array[i] > 0)
@@ -113,14 +98,6 @@ public class Huffman
 		{
 			System.out.print("\""+sentence.charAt(i)+"\"-"+HuffmanTree.getCode(sentence.charAt(i)) +" " );
 		}
-		
-
-		// get all the codes for the letters and print them out
-		// call the getCode() method on the HuffmanTree Tree object for each
-		// letter in the sentence
-
-		// print out all the info
-
 	}
 
 }
