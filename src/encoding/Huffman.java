@@ -42,10 +42,6 @@ public class Huffman
 				System.out.println("'" + (char) i + "' appeared " + array[i]
 						+ ((array[i] == 1) ? " time" : " times"));
 
-				// FILL THIS IN:
-
-				// MAKE THE FOREST OF TREES AND ADD THEM TO THE PQ
-				
 				Node newNode = new Node();
 				newNode.letter = ((char) i);
 				
@@ -53,18 +49,12 @@ public class Huffman
 				codeTree.frequency = array[i];
 				codeTree.root =newNode;
 				PQ.add(codeTree);
-
-				// create a new Tree
-				// set the cumulative frequency of that Tree
-				// insert the letter as the root node
-				// add the Tree into the PQ
-
 			}
 		}
 
 		while (PQ.size() > 1)
 		{ // while there are two or more Trees left in the forest
-			// IMPLEMENT THE HUFFMAN ALGORITHM
+			// huffman algorithm
 			Node rootNode = new Node();
 			rootNode.letter = '@';
 			
